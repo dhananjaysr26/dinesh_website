@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #161616;
+    --bg2: #1b1c1e;
+    --text: #ffffff;
+    --highlights: #FF570A;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory; */
+}
+
+body {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease all;
+    /* scroll-snap-type: y mandatory; */
+}
+
+nav {
+    /* height: 80px; */
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    scroll-snap-align: start;
+}
+
+ul.main-nav {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    padding: 10px;
+}
+
+ul.main-nav li {
+    padding: 16px 20px;
+}
+
+a {
+    color: var(--highlights);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff580a9a;
+}
+
+.toggle i {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--highlights);
+    display: none;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--highlights);
+    padding: 0;
+    margin: 20px;
+}
+
+@media only screen and (max-width : 800px) {
+    .toggle i {
+        display: block;
+    }
+
+    nav {
+        display: block;
+        width: 100vw;
+    }
+
+    nav ul.main-nav {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav ul.main-nav li {
+        text-align: center;
+    }
+
+    .visible {
+        display: block !important;
+    }
+
+    .nav-visible {
+        height: 100vh;
+        width: 100vw;
+        transition: 1s all;
+    }
+
+}
+
+.navigation-menu:hover ul.nm {
+    display: block;
+}
+
+#intro,
+#projects,
+#skills,
+#experience,
+#education,
+#contact {
+    display: grid;
+    place-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 100vh;
+    /* scroll-snap-align: start; */
+}
+
+#intro{
+    min-height: 90vh;
+}
+
+@media screen and (max-width:700px) {
+
+    #projects,
+    #skills,
+    #experience,
+    #education,
+    #contact {
+        min-height: auto;
+    }
+}
+
+#projects,
+#skills,
+#contact {
+    background-color: var(--bg2);
+}
+
+.name {
+    font-size: 6rem;
+}
+
+.social a {
+    margin-right: 5px;
+}
+
+.name span {
+    color: var(--highlights);
+}
+
+.designation {
+    font-size: 1.5rem;
+}
+
+.me img {
+    height: 400px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin: 10px auto;
+}
+
+.description {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width:700px) {
+    .name {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .name {
+        font-size: 2.4rem;
+    }
+}
+.knowmore{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    border-bottom: 2px solid var(--highlights);
+    border-right: 2px solid var(--highlights);
+    transform: rotate(45deg);
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+.project-body {
+    border: 1px solid var(--highlights);
+    border-radius: 10px;
+}
+
+.project-body img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    padding: 10px;
+    color: var(--highlights);
+}
+
+.percentage {
+    margin: 10px auto;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 4px -4px 8px #FF570A, -4px 4px 8px #FF570A, 4px 4px 8px #FF570A, -4px -4px 8px #FF570A;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    width: 85px;
+    /* background-color: white; */
+    border-radius: 50%;
+}
+
+@media screen and (max-width:600px) {
+    .percentage {
+        height: 65px;
+        width: 65px;
+    }
+
+    .icon {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.icon .img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.college-container {
+    padding: 20px;
+    /* position: absolute; */
+    /* border: 1px solid var(--highlights); */
+    box-shadow: 5px 6px 6px var(--highlights), -3px -3px 4px var(--highlights);
+
+}
+
+@media screen and (max-widht:600px) {
+    .college-container {
+        margin: 10px auto;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+}
+
+.college-logo {
+    position: relative;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--highlights);
+}
+
+.college-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.college-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width:700px) {
+    .college-name {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+.degree-name {
+    font-size: 0.9rem;
+}
+
+.date {
+    font-size: 0.7rem;
+    color: grey;
+}
+
+.form-container {
+    /* border: 1px solid var(--highlights); */
+    padding: 20px;
+    box-shadow: 5px 6px 6px var(--highlights), -3px -3px 4px var(--highlights);
+}
+
+button {
+    background-color: var(--highlights);
+    color: var(--text);
+}
+
+
+
+.top i {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 35px;
+}
+
+
+.companyLogo {
+    height: 40px;
+}
+
+.companyLogo img {
+    height: 100%;
+}
+
+@media screen and (min-width:800px) {
+    .companyLogo {
+        text-align: center;
+    }
+}
+
+.right {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+}
+
+.baaar {
+    margin: 10px auto;
+    height: 22px;
+    width: 100px;
+    border: 2px solid var(--text);
+    display: flex;
+    align-items: center;
+}
+
+.chota-bar {
+    background-color: #ff580ab6;
+    height: 100%;
+    color: white;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    0% {
+        width: 0px;
+    }
+
+    22% {
+        width: 60px;
+    }
+
+    44% {
+        width: 130px;
+    }
+
+    66% {
+        width: 200px;
+    }
+
+    88% {
+        width: 280px;
+    }
+
+    100% {
+        width: 350px;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #FF570A;
+    }
+}
+
+
+.submit-btn:hover {
+    background-color: #ff580ab6;
+}
+
+#switch {
+    /* background-color: var(--text); */
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    height: 40px;
+    width: 40px;
+    /* border-radius: 50%; */
+}
+
+#switch i {
+    font-size: 40px;
+    color: var(--text);
+    animation: shake 4s infinite;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    25% {
+        transform: rotate(60deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    75% {
+        transform: rotate(60deg);
+    }
+
+    90% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+
+}
+
+
+/* particle js */
+canvas {
+    display: block;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-image: url("");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
