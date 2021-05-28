@@ -63,37 +63,11 @@
         <div class="container">
             <h1 class="pb-4"><i class="fas fa-laptop-code"></i> Projects</h1>
             <div class="row justify-content-around my-5">
-                <div class="col-12 col-md-4  my-3">
+                <div class="">
                     <div class="project-body">
-                        <a href="#" target="blank"><img src="images/project/1.jpg"
-                                alt="Blogging"></a>
+                        <div class="title-insta" id="instafeed-container"></div>
                     </div>
-                    <div class="title">1</div>
-                </div>
-                <div class="col-12 col-md-4  my-3">
-                    <div class="project-body">
-                        <a href="#" target="blank"><img src="images/project/2.jpg"
-                                alt="LongShort"></a>
-                    </div>
-                    <div class="title">2</div>
-                </div>
-                <div class="col-12 col-md-4 my-3">
-                    <div class="project-body">
-                        <img src="images/project/3.jpg" alt="HackArena">
-                    </div>
-                    <div class="title">3</div>
-                </div>
-                <div class="col-12 col-md-4 my-3">
-                    <div class="project-body">
-                        <img src="images/project/4.jpg" alt="Chat App">
-                    </div>
-                    <div class="title">4</div>
-                </div>
-                <div class="col-12 col-md-4 my-3">
-                    <div class="project-body">
-                       <a href="#" target="_blank"> <img src="images/project/5.jpg" alt="PhotoEditor"></a>
-                    </div>
-                    <div class="title">5</div>
+                    <div class="title"></div>
                 </div>
             </div>
 
@@ -328,6 +302,17 @@
     </div>
     <div id="switch"><i class="fas fa-lightbulb"></i></div>
     <div class="top"><a href="#"><i class="fa fa-arrow-up"></i></a></div>
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+        limit : 100,
+    	resolution: 'low_resolution',
+		accessToken: 'IGQVJVTXRrd0c0QXJMN0hNM2hEUmtPMVpCSVJ3OEthbkxTTi1KZAE9sWGpyN0V5aDc5WGpaWjZAHSGVTN19OdGVYbVlyUjVQbnV4UVJhdVFzNDdwWDVGbEkwX1lCcnVWc21wbk1qcmlLT0pmUG1UazdiNQZDZD'
+	});
+	userFeed.run();
+	</script>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -340,7 +325,7 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="./script.js" defer></script>
 <footer>
-    <h3 align="center">Made With<a href="https://www.linkedin.com/in/dhananjaysr26/"> <img src="https://img.icons8.com/flat-round/64/000000/filled-like.png"/>@dhananjaysr26</a></h3>
+    <h3 align="center">Made With<a href="https://www.linkedin.com/in/dhananjaysr26/"> by<img src="https://img.icons8.com/flat-round/64/000000/filled-like.png"/>@dhananjaysr26</a></h3>
   </footer>
 
 </html>
